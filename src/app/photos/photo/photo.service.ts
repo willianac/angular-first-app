@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http"
 import { Injectable } from "@angular/core"
 
-interface IimagemProps {
+export interface IimagemProps {
     url: string
     alternativo: string
 }
