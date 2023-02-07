@@ -1,3 +1,10 @@
+<div class="form w-25 mx-auto mt-4">
+  <label for="SearchImages" class="form-label">Search Image</label>
+  <input [(ngModel)]="values" type="text" class="form-control" id="box" aria-describedby="searchHelp" (keyup)="filter($event)">
+</div>
+<div *ngIf="!filteredPhotos.length" class="text-center text-white-50">
+  <p>Não foi possivel encontrar fotos</p>
+</div>
 <div class="conteiner">
-    <ap-photo *ngFor="let photo of photos" [url]="photo.url" [alternativo]="photo.alternativo" class="w-50 mx-auto"></ap-photo>
+  <ap-photo *ngFor="let photo of photos | filterByAlt:values" [url]="photo.url" [alternativo]="photo.alternativo" class="w-50 mx-auto"></ap-photo>
 </div>
