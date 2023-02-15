@@ -1,0 +1,20 @@
+<header class="navbar flex justify-content-between align-items-center px-4 h-4rem">
+    <h1>Tuning Collection</h1>
+    <nav>
+        <div *ngIf="user$ | async as user">
+            <div *ngIf="user.email; else login" class="flex gap-2">
+                <i class="pi pi-user"></i>
+                <span class="nav-username">{{user.name}}</span> 
+                <a (click)="logout()" class="nav-links">Logout</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<ng-template #login>
+    <div class="flex gap-2">
+        <a routerLink="" class="nav-links">Login</a>
+        <a routerLink="home/register" class="nav-links">Registrar</a>
+    </div>
+</ng-template>

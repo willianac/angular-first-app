@@ -1,0 +1,16 @@
+.btn {
+    justify-content: center;
+}
+
+.form {
+    position: relative;
+    float: right;
+    margin-right: 12rem;
+}
+
+.form-group {
+    width: 100%;
+}
+.form-group > span > input {
+    width: 100%;
+}

@@ -1,0 +1,61 @@
+<form class="form flex flex-column p-4 w-4 gap-3 mt-8" [formGroup]="registerForm" (submit)="cadastrar()">
+    <h2>Registre-se agora mesmo!</h2>
+    <div>
+        <span class="p-float-label">
+            <input type="text" name="fullName" formControlName="fullName" pInputText>
+            <label for="fullname input">Seu nome</label>
+        </span>
+    </div>
+    <div>
+        <span class="p-float-label" >
+            <input type="text" name="username" formControlName="userName" pInputText>
+            <label for="username input">Seu username</label>
+        </span>
+        <app-mensagem-form
+            *ngIf="registerForm.get('userName')?.errors?.['notInLowercase']"
+            mensagem="Username deve ser minúsculo"
+        ></app-mensagem-form>
+        <app-mensagem-form
+            *ngIf="registerForm.get('userName')?.errors?.['userAlreadyExists']"
+            mensagem="Username já está sendo usado"
+        ></app-mensagem-form>
+    </div>
+    <div>
+        <span class="p-float-label">
+            <input type="email" name="email" formControlName="email" pInputText>
+            <label for="email input">Seu Email</label>
+        </span>
+        <app-mensagem-form
+            *ngIf="registerForm.get('email')?.errors?.['required'] && registerForm.get('email')?.touched"
+            mensagem="Email não preenchido"
+        ></app-mensagem-form>
+        <app-mensagem-form
+            *ngIf="registerForm.get('email')?.errors?.['email'] && registerForm.get('email')?.touched"
+            mensagem="Email inválido"
+        ></app-mensagem-form>
+    </div>
+    <div>
+        <span class="p-float-label">
+            <input type="password" name="password" formControlName="password" pPassword>
+            <label for="password input">Sua senha</label>
+        </span>
+        <app-mensagem-form
+            *ngIf="registerForm.get('password')?.errors && registerForm.get('password')?.touched"
+            mensagem="A senha é obrigatória"
+        ></app-mensagem-form>
+        <app-mensagem-form
+            *ngIf="registerForm.errors?.['userAndPassAreEqual']"
+            mensagem="Nome de usuário e senha não podem ser iguais"
+        ></app-mensagem-form>
+    </div>
+    <button
+        label="Registrar" 
+        type="submit" 
+        class="btn p-button-lg" 
+        icon="pi pi-check" 
+        iconPos="right" 
+        pButton
+        [disabled]="!registerForm.valid">
+    </button>
+    <p>Já é cadastrado? <a routerLink=""> Faça Login</a></p>
+</form>

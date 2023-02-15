@@ -1,0 +1,15 @@
+.form {
+    position: relative;
+    float: right;
+    margin-right: 12rem;
+}
+
+.form input {
+    width: 100%;
+}
+
+.btn {
+    justify-content: center;
+    margin-top: 26px;
+    gap: 6px;
+}

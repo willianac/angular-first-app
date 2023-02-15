@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PhotoListComponent } from './photos/photo-list/photo-list.component';
-import { PhotoFormComponent } from './photos/photo-form/photo-form.component'
-import { NotFoundComponent } from './errors/not-found/not-found.component';
 
 const routes: Routes = [
-  {path: "user/:photos", component: PhotoListComponent},
-  {path: "photos/add", component: PhotoFormComponent},
-  {path: "**", component: NotFoundComponent}
+  {path: "", redirectTo: "home", pathMatch: "full"},
+  {
+    path: "home",
+    loadChildren: () => import("./home/home.module").then(mod => mod.HomeModule)
+  },
+  {
+    path: "cars",
+    loadChildren: () => import("./carros/carros.module").then(mod => mod.CarrosModule)
+  }
 ];
 
 @NgModule({

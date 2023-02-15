@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from "@angular/common/http"
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PhotosModule } from './photos/photos.module';
+import { HeaderModule } from './header/header.module';
+import { FooterModule } from './footer/footer.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,9 @@ import { PhotosModule } from './photos/photos.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PhotosModule
+    HttpClientModule,
+    HeaderModule,
+    FooterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

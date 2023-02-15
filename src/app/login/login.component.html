@@ -1,0 +1,34 @@
+<form class="form flex flex-column align-items-center gap-4 w-4 p-4 mt-8" (ngSubmit)="login()" #formRef="ngForm">
+    <h1 class="text-center">Faça seu login</h1>
+    <div class="form-group">
+        <span class="p-float-label">
+            <input 
+                type="text" 
+                name="name" 
+                pInputText 
+                class="input" 
+                [(ngModel)]="nome" 
+                required 
+                #userInput="ngModel"
+            />
+            <label for="emailInput">Seu username</label>
+        </span>
+        <app-mensagem-form *ngIf="userInput.invalid && userInput.touched" mensagem="Usuário é obrigatório"></app-mensagem-form>
+    </div>
+    <div class="form-group">
+        <span class="p-float-label">
+            <input 
+                type="password" 
+                name="passord" 
+                pInputText 
+                [(ngModel)]="senha" 
+                required 
+                #passwordInput="ngModel"
+            />
+            <label for="passwordInput">Sua senha</label>
+        </span>
+        <app-mensagem-form *ngIf="passwordInput.invalid && passwordInput.touched" mensagem="Senha é obrigatoria!"></app-mensagem-form>
+    </div>
+    <button [disabled]="formRef.invalid" pButton class="btn w-12 mt-3">Fazer login</button>
+    <p>Não possui uma conta? <a routerLink="register"> Registre-se</a></p>
+</form>
