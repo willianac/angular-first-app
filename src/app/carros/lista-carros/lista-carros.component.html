@@ -1,1 +1,3 @@
-<p>lista-carros works!</p>
+<div *ngIf="carros$ | async as carros">
+    <app-grade-fotos-carros [carros]="carros"></app-grade-fotos-carros>
+</div>

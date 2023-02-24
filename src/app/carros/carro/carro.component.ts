@@ -18,4 +18,8 @@ export class CarroComponent {
       this.urlOriginal = API + "/imgs/" + url
     }
   }
+
+  get url(): string {
+    return this.urlOriginal
+  }
 }
