@@ -1,0 +1,10 @@
+<div *ngIf="carro$ | async as carros">
+    <div class="grid">
+        <div class="lg:col-8">
+            <app-carro [url]="carros.url" [description]="carros.description"></app-carro>
+        </div>
+        <div class="lg:col-4">
+            <small>{{carros.description}}</small>
+        </div>
+    </div>
+</div>
