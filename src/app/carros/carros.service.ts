@@ -14,9 +14,11 @@ export class CarrosService {
 
   constructor(private http: HttpClient, private token: TokenService) { }
 
-  listaDoUsuario(username: string): Observable<ICarro[]> {
-    const authToken = this.token.retornaToken()
-    const headers = new HttpHeaders().append("x-access-token", authToken)
-    return this.http.get<ICarro[]>(`${API}/${username}/photos`, {headers})
+  public listaDoUsuario(username: string): Observable<ICarro[]> {
+    return this.http.get<ICarro[]>(`${API}/${username}/photos`)
+  }
+
+  public buscaPorId(id:number): Observable<ICarro> {
+    return this.http.get<ICarro>(`${API}/photos/${id}`)
   }
 }
