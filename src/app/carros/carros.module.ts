@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { CarrosRoutingModule } from './carros-routing.module';
 import { ListaCarrosComponent } from './lista-carros/lista-carros.component';
@@ -8,6 +9,8 @@ import { CardComponent } from '../card/card.component';
 import { GradeFotosCarrosComponent } from './grade-fotos-carros/grade-fotos-carros.component';
 import { CarroDetalhesComponent } from './carro-detalhes/carro-detalhes.component';
 import { ComentariosComponent } from './carro-detalhes/comentarios/comentarios.component';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { ButtonModule } from 'primeng/button';
 
 
 @NgModule({
@@ -21,7 +24,10 @@ import { ComentariosComponent } from './carro-detalhes/comentarios/comentarios.c
   ],
   imports: [
     CommonModule,
-    CarrosRoutingModule
+    ReactiveFormsModule,
+    CarrosRoutingModule,
+    InputTextareaModule,
+    ButtonModule
   ]
 })
 export class CarrosModule { }
