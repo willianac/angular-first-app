@@ -1,14 +1,20 @@
-<div *ngIf="carro$ | async as carros">
+<div *ngIf="carro$ | async as carros" class="mb-9">
     <div class="grid align-items-center">
         <div class="lg:col-8">
             <app-carro [url]="carros.url" [description]="carros.description"></app-carro>
         </div>
         <div class="lg:col-4">
             <small>{{carros.description}}</small>
+            <app-comentarios [photoID]="carroId" *ngIf="carros.allowComments ; else warning"></app-comentarios>
+
+            <ng-template #warning>
+                <p>Usuário não pode comentar o animal</p>
+            </ng-template>
+
         </div>
         <div class="icons flex w-4">
             <i (click)="curtir()" class="pi pi-heart">{{carros.likes}}</i>
-            <i class="pi pi-comment"></i>
+            <i class="pi pi-comment">{{carros.comments}}</i>
             <i (click)="excluir()" class="pi pi-trash"></i>
         </div>
     </div>

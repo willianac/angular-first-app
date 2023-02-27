@@ -1,1 +1,19 @@
-<p>comentarios works!</p>
+<div *ngIf="comentarios$ | async as comentarios">
+    <ul class="comment-list">
+        <li *ngFor="let comentario of comentarios">
+            <p>{{comentario.userName}}</p>
+            <em>{{comentario.date | date: "dd-MM-yyyy HH:mm"}}</em>
+            <p>{{comentario.text}}</p>
+        </li>
+    </ul>
+</div>
+
+<form [formGroup]="comentarioForm" (ngSubmit)="gravar()" class="mt-4">
+    <div>
+        <span class="p-float-label">
+            <textarea formControlName="comentario" cols="30" rows="3" pInputTextarea resize="false"></textarea>
+            <label for="comment text">Comentário</label>
+        </span>
+    </div>
+    <button type="submit" pButton>Enviar</button>
+</form>

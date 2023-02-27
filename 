@@ -1,0 +1,143 @@
+[33mcommit e09990f7d3bba3000a2a719fdc6177c875e0d73f[m[33m ([m[1;36mHEAD -> [m[1;32mlikes-comments[m[33m, [m[1;31morigin/car-detail[m[33m)[m
+Author: willianac <willianac@live.com>
+Date:   Mon Feb 27 14:10:55 2023 -0300
+
+    add delete and like methods
+
+[33mcommit 486731fdfef4bc744d20d2d14ce3c582e6b5356a[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Merge: 2044f84 379fbc1
+Author: Willian Almeida <105891930+willianac@users.noreply.github.com>
+Date:   Sun Feb 26 16:59:06 2023 -0300
+
+    Merge pull request #8 from willianac/routing
+    
+    Routing
+
+[33mcommit 379fbc13f7c0e58b8cec0f7c58e941268961153f[m
+Merge: 1f8394e 60733c5
+Author: Willian Almeida <105891930+willianac@users.noreply.github.com>
+Date:   Sun Feb 26 16:58:07 2023 -0300
+
+    Merge pull request #7 from willianac/car-detail
+    
+    Car detail
+
+[33mcommit 60733c5ad7c5a42d4334ae288ff6c16c0540e573[m[33m ([m[1;32mcar-detail[m[33m)[m
+Author: willianac <willianac@live.com>
+Date:   Sun Feb 26 16:48:43 2023 -0300
+
+    add interceptors
+
+[33mcommit 2044f84dc6497395014cac457a0cc7562df7eb38[m
+Merge: 406b879 1f8394e
+Author: Willian Almeida <105891930+willianac@users.noreply.github.com>
+Date:   Fri Feb 24 17:35:52 2023 -0300
+
+    Merge pull request #6 from willianac/routing
+    
+    add guard routes
+
+[33mcommit 1f8394ed2dc9c38f6ed38a171bb9c973cb7df07c[m[33m ([m[1;31morigin/routing[m[33m, [m[1;32mrouting[m[33m)[m
+Author: willianac <willianac@live.com>
+Date:   Fri Feb 24 17:30:23 2023 -0300
+
+    add guard routes
+
+[33mcommit 406b8797aada38610de68b483b70840b9c07ea5a[m[33m ([m[1;32mphotos[m[33m)[m
+Merge: 3575a8c 2ec2187
+Author: Willian Almeida <105891930+willianac@users.noreply.github.com>
+Date:   Fri Feb 24 15:45:08 2023 -0300
+
+    Merge pull request #5 from willianac/photos
+    
+    improvements
+
+[33mcommit 2ec2187599b1206de8c731c49dbcf68b2dcd6f6b[m[33m ([m[1;31morigin/photos[m[33m)[m
+Author: willianac <willianac@live.com>
+Date:   Fri Feb 24 15:44:44 2023 -0300
+
+    improvements
+
+[33mcommit 3575a8c90f7a4d92292995d3bd74c547c5ce5e57[m
+Merge: 766c5d6 6af7584
+Author: Willian Almeida <105891930+willianac@users.noreply.github.com>
+Date:   Thu Feb 23 22:48:55 2023 -0300
+
+    Merge pull request #4 from willianac/photos
+    
+    add environments and photo service
+
+[33mcommit 6af75844188681709a67c39f92ba69c143d7a480[m
+Author: willianac <willianac@live.com>
+Date:   Thu Feb 23 22:48:33 2023 -0300
+
+    add environments and photo service
+
+[33mcommit 766c5d68f1792cbbde16349c4b6428611dc707c5[m
+Author: willianac <willianac@live.com>
+Date:   Wed Feb 15 17:57:47 2023 -0300
+
+    add auth token
+
+[33mcommit af5c7134e5522952f9b27bbb837701e06078b7e5[m
+Merge: c57f006 75aa077
+Author: Willian Almeida <105891930+willianac@users.noreply.github.com>
+Date:   Tue Feb 7 11:32:32 2023 -0300
+
+    Merge pull request #3 from willianac/routing
+    
+    add search bar
+
+[33mcommit 75aa077a23414e12ddd1e30659863a3a787c63c9[m
+Author: willianac <willianac@live.com>
+Date:   Tue Feb 7 11:31:44 2023 -0300
+
+    add search bar
+
+[33mcommit c57f006ca974f3d72bd8b12cc6357d5c1eca262e[m
+Merge: cead44c 1b3e445
+Author: Willian Almeida <105891930+willianac@users.noreply.github.com>
+Date:   Sat Feb 4 22:36:23 2023 -0300
+
+    Merge pull request #2 from willianac/routing
+    
+    update
+
+[33mcommit 1b3e4451ebbd1ac66f771f4e784f4ac61955b2d0[m
+Author: willianac <willianac@live.com>
+Date:   Sat Feb 4 22:35:59 2023 -0300
+
+    update
+
+[33mcommit cead44c4671c8a23ab1c597f7dfc2772b94a7408[m
+Merge: 73d02e4 dfc7997
+Author: Willian Almeida <105891930+willianac@users.noreply.github.com>
+Date:   Fri Feb 3 23:57:07 2023 -0300
+
+    Merge pull request #1 from willianac/routing
+    
+    router
+
+[33mcommit dfc799739a6575a53488042fad7b835245d01665[m
+Author: willianac <willianac@live.com>
+Date:   Fri Feb 3 23:56:30 2023 -0300
+
+    router
+
+[33mcommit 73d02e419d9267ffec4a6a90df3811b1052c84aa[m
+Author: Willian Almeida <105891930+willianac@users.noreply.github.com>
+Date:   Thu Feb 2 21:09:19 2023 -0300
+
+    Update README.md
+
+[33mcommit 3efe4a7f9af4f53f0871ba5c5d934daad47426d5[m
+Author: willianac <willianac@live.com>
+Date:   Thu Feb 2 21:08:35 2023 -0300
+
+    first commit
+
+[33mcommit 728703c7cc7f406a9d64a73493d2e5162eca4411[m
+Author: willianac <willianac@live.com>
+Date:   Thu Feb 2 18:39:08 2023 -0300
+
+    initial commit
