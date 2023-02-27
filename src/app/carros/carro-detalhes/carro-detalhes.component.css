@@ -1,0 +1,15 @@
+.grid {
+    position: relative;
+    top: 12rem;
+}
+
+.icons {
+    gap: 2rem;
+}
+
+.icons i {
+    position: relative;
+    left: 6rem;
+    font-size: 3rem;
+    cursor: pointer;
+}

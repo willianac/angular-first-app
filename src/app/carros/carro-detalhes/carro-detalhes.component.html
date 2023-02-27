@@ -1,10 +1,15 @@
 <div *ngIf="carro$ | async as carros">
-    <div class="grid">
+    <div class="grid align-items-center">
         <div class="lg:col-8">
             <app-carro [url]="carros.url" [description]="carros.description"></app-carro>
         </div>
         <div class="lg:col-4">
             <small>{{carros.description}}</small>
+        </div>
+        <div class="icons flex w-4">
+            <i (click)="curtir()" class="pi pi-heart">{{carros.likes}}</i>
+            <i class="pi pi-comment"></i>
+            <i (click)="excluir()" class="pi pi-trash"></i>
         </div>
     </div>
 </div>

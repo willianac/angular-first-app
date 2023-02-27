@@ -7,6 +7,7 @@ import { CarroComponent } from './carro/carro.component';
 import { CardComponent } from '../card/card.component';
 import { GradeFotosCarrosComponent } from './grade-fotos-carros/grade-fotos-carros.component';
 import { CarroDetalhesComponent } from './carro-detalhes/carro-detalhes.component';
+import { ComentariosComponent } from './carro-detalhes/comentarios/comentarios.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { CarroDetalhesComponent } from './carro-detalhes/carro-detalhes.componen
     CarroComponent,
     CardComponent,
     GradeFotosCarrosComponent,
-    CarroDetalhesComponent
+    CarroDetalhesComponent,
+    ComentariosComponent,
   ],
   imports: [
     CommonModule,
