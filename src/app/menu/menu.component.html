@@ -1,0 +1,11 @@
+<div [ngClass]="{'activeMenu' : menuIsOpen}">
+    <div class="menu">
+        <i class="pi pi-times" (click)="mostraMenu()"></i>
+        <div>
+            <ng-content>
+
+            </ng-content>
+        </div>
+    </div>
+    <div (click)="mostraMenu()" class="overlay"></div>
+</div>

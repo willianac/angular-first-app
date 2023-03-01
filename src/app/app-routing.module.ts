@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AutenticacaoGuard } from './autenticacao/autenticacao.guard';
 import { LoginGuard } from './autenticacao/login.guard';
+import { NovoCarroComponent } from './carros/novo-carro/novo-carro.component';
 
 const routes: Routes = [
   {path: "", redirectTo: "home", pathMatch: "full"},
@@ -14,6 +15,11 @@ const routes: Routes = [
     path: "cars",
     loadChildren: () => import("./carros/carros.module").then(mod => mod.CarrosModule),
     canMatch: [AutenticacaoGuard]
+  },
+  {
+    path: "teste",
+    component : NovoCarroComponent,
+    canMatch : [AutenticacaoGuard]
   }
 ];
 

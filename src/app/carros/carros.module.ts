@@ -11,6 +11,8 @@ import { CarroDetalhesComponent } from './carro-detalhes/carro-detalhes.componen
 import { ComentariosComponent } from './carro-detalhes/comentarios/comentarios.component';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { ButtonModule } from 'primeng/button';
+import { NovoCarroComponent } from './novo-carro/novo-carro.component';
+import { FileUploadModule } from 'primeng/fileupload';
 
 
 @NgModule({
@@ -21,13 +23,15 @@ import { ButtonModule } from 'primeng/button';
     GradeFotosCarrosComponent,
     CarroDetalhesComponent,
     ComentariosComponent,
+    NovoCarroComponent,
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     CarrosRoutingModule,
     InputTextareaModule,
-    ButtonModule
+    ButtonModule,
+    FileUploadModule,
   ]
 })
 export class CarrosModule { }
