@@ -1,0 +1,17 @@
+.conteiner {
+    position: relative;
+    top: 8rem;
+}
+
+.conteiner .wrapper {
+    margin-right: 6rem;
+    gap: 26rem;
+}
+
+form {
+    width: 18rem;
+}
+
+button {
+    justify-content: center;
+}

@@ -1,0 +1,46 @@
+<main class="conteiner flex justify-content-end h-26rem">
+    <div class="wrapper flex justify-content-between">
+        <div class="preview-box">
+            <H1>PREVIEW</H1>
+        </div>
+        <form [formGroup]="novoCarroForm" (ngSubmit)="fazUpload()">
+            <div *ngIf="!preview; else previewRef">
+                <h3>Enviar foto</h3>
+                <button (click)="fileInput.click()" type="button" class="p-button-sm" pButton>Adicionar</button>
+                <input 
+                    #fileInput
+                    formControlName="file" 
+                    type="file" 
+                    hidden 
+                    accept="image/*" 
+                    (change)="gravaArquivo($event.target)" 
+                />
+            </div>
+            <ng-template #previewRef>
+                <app-carro [url]="preview" title="Preview"></app-carro>
+            </ng-template>
+            <div class="mt-4">
+                <span class="p-float-label">
+                    <textarea formControlName="description" id="" cols="30" rows="4" pInputTextarea></textarea>
+                    <label for="description input">Descrição</label>
+                </span>
+            </div>
+            <div class="mt-2">
+                <input type="checkbox" formControlName="allowComments">
+                <label for="allowComments checkbox">Permitir comentários</label>
+            </div>
+            <div *ngIf="!progress; else uploadDiv" class="flex flex-column gap-2 mt-4">
+                <button [disabled]="novoCarroForm.invalid" type="submit" pButton>Enviar</button>
+                <button routerLink="/cars" type="button" class="p-button-outlined" pButton>Cancelar</button>
+            </div>
+            <ng-template #uploadDiv>
+                <h2>Percentual Concluido {{progress}}%</h2>
+            </ng-template>
+        </form>
+    </div>
+</main>
+
+<!-- <div class="flex flex-column gap-2 mt-4">
+    <button pButton type="submit">Enviar</button>
+    <button pButton type="button" class="p-button-outlined">Cancelar</button>
+</div> -->
